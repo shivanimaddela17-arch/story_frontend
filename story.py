@@ -1,7 +1,7 @@
 import gradio as gr
 import requests
 import os
-FastAPI_URL = "http://localhost:8000/story"
+FastAPI_URL = "https://story-backend-1-gj98.onrender.com/story"
 def story(prompt):
     response = requests.post(FastAPI_URL, json={"prompt": prompt})
     if response.status_code == 200:
